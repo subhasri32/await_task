@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang-"en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<META NAME="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Document</title> 
+<body>
+    <script>
+    //concatinating europe and asia
+async function niceMessage(){
+const data=await fetch("https://restcountries.eu/rest/v2/region/europe");
+const region1=await data.json();
+
+const data1=await fetch("https://restcountries.eu/rest/v2/region/asia")
+const region2=await data1.json();
+
+ console.log(region1.concat(region2))
+// const [val1,val2]=Promise.all([region1,region2])
+// console.log(val1,val2);
+}
+niceMessage();
+// who is speaking spanish in europe
+async function niceMessage()
+{
+const xx=await fetch("https://restcountries.eu/rest/v2/region/europe");
+const region1=await xx.json();
+console.log(region1);
+  for(let i=0;i<region1.length;i++)
+    {
+      if((region1[i].region=="europe")&&(region1[i].languages[name]=="Spanish"))
+        {
+          console.log(region1);
+        }
+    }
+}
+niceMessage();
+</script>
+</body>
